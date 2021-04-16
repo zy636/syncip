@@ -4,3 +4,4 @@
 content=$(cat $1  2>/dev/null || echo $1) 
 echo $content | openssl aes-128-cbc -k $2 -base64 2>/dev/null > encip.txt
 git commit -a -m "update ip" 2>&1 >/dev/null
+git push origin master
